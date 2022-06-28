@@ -1,0 +1,6 @@
+@use '../abstracts' as a;
+
+body {
+    background: a.$bgc;
+    background-size: cover;
+}

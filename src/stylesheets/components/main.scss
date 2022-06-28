@@ -1,0 +1,30 @@
+@use '../abstracts' as a;
+
+.main {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 400px;
+    background: a.$mbgc;
+    border-radius: a.$br;
+    box-shadow: a.$bs;
+    padding-bottom: 10px;
+    @include a.mq('576px') {
+        width: 250px;
+    }
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75%;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 1rem;
+    color: #fff;
+}

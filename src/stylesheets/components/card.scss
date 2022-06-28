@@ -1,0 +1,69 @@
+@use '../abstracts' as a;
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 5px;
+    padding: 5px 20px;
+    width: 180px;
+    height: 120px;
+    background: a.$cbgc;
+    border-radius: a.$br;
+    box-shadow: a.$bs;
+    cursor: pointer;
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            // center image
+            margin: auto;
+            width: 65px;
+            object-fit: cover;
+        }
+
+        h2 {
+            margin: 0;
+            padding: 0;
+            font-size: a.$fs;
+            color: a.$fc;
+        }
+    }
+
+    .desc {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        text-align: left;
+        padding: 10px;
+        transform: scaleX(-1);
+    }
+
+    &:hover {
+        
+        box-shadow: a.$bsh;
+        transition: all 0.3s ease-in-out;
+
+        .header {
+        transform: scale(1.3);
+        transition: transform 0.3s ease-in-out;
+        }
+    }
+    // reverse the transition when the mouse leaves
+    &:not(:hover) {
+
+        box-shadow: a.$bs;
+        transition: all 0.3s ease-in-out;
+
+        .header {
+            transform: scale(1);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+    
